@@ -4,7 +4,7 @@ import contactRouter from "./route/index.js"
 import cors from "cors"
 import listEndpoints from "express-list-endpoints"
 const server = express()
-const port = 3001
+const port = process.env.PORT || 3001
 if (process.env.TS_NODE_DEV || process.env.NODE_ENV === "test")
   require("dotenv").config()
 
