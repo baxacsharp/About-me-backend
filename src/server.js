@@ -8,7 +8,7 @@ const port = process.env.PORT || 3001
 if (process.env.TS_NODE_DEV || process.env.NODE_ENV === "test")
   require("dotenv").config()
 
-server.use(cors({ origin: "http://localhost:3000", credentials: true }))
+server.use(cors({ origin: "https://about-me-orcin.vercel.app/", credentials: true }))
 server.use(express.json())
 server.use("/contact", contactRouter)
 console.table(listEndpoints(server))
